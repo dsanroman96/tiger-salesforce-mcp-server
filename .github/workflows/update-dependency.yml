@@ -1,0 +1,19 @@
+name: Update dependency version
+
+on:
+  repository_dispatch:
+    types: [upstream-released]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-dependency:
+    uses: dsanroman96/workflow-templates/.github/workflows/downstream-update.yml@main
+    with:
+      upstream_name: ${{ github.event.client_payload.upstream }}
+      version_tag: ${{ github.event.client_payload.version }}
+      open_pr: ${{ github.event.client_payload.open_pr }}
+      dependency_file_path: package.json
+      release_handler: typescript/bun
