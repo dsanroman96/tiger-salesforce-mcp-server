@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@ai-sdk/openai": "^2.0.68",
-    "mcp-boilerplate-node": "github:dsanroman96/mcp-boilerplate-node#v0.8.0",
+    "mcp-boilerplate-node": "github:dsanroman96/mcp-boilerplate-node#v0.0.6",
     "ai": "^5.0.94",
     "dotenv": "^17.2.3",
     "jsforce": "^3.10.14",
